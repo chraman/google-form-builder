@@ -1,8 +1,10 @@
 {
-  "scripts": {
-    "build": "tsc"
+  "scripts": {  
+    "build": "tsc && npm run copy-html",
+    "copy-html": "copyfiles -u 1 src/index.html dist"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "typescript": "^5.7.3"
   }
 }
